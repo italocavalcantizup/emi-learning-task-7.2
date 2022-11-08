@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E8C5CEA2919CB5D006DD4B1 /* Raca.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8C5CE92919CB5D006DD4B1 /* Raca.swift */; };
+		3E8C5CEC2919CC75006DD4B1 /* ListaDeRacasViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8C5CEB2919CC75006DD4B1 /* ListaDeRacasViewCell.swift */; };
+		3E8C5CEE2919D244006DD4B1 /* RacasSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8C5CED2919D244006DD4B1 /* RacasSectionHeaderView.swift */; };
 		58137953282EC2A20079F650 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58137952282EC2A20079F650 /* AppDelegate.swift */; };
 		58137955282EC2A20079F650 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58137954282EC2A20079F650 /* SceneDelegate.swift */; };
-		58137957282EC2A20079F650 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58137956282EC2A20079F650 /* ViewController.swift */; };
+		58137957282EC2A20079F650 /* ListaDeRacasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58137956282EC2A20079F650 /* ListaDeRacasViewController.swift */; };
 		5813795A282EC2A20079F650 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58137958282EC2A20079F650 /* Main.storyboard */; };
 		5813795C282EC2A40079F650 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5813795B282EC2A40079F650 /* Assets.xcassets */; };
 		5813795F282EC2A40079F650 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5813795D282EC2A40079F650 /* LaunchScreen.storyboard */; };
@@ -18,10 +21,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E8C5CE92919CB5D006DD4B1 /* Raca.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Raca.swift; sourceTree = "<group>"; };
+		3E8C5CEB2919CC75006DD4B1 /* ListaDeRacasViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaDeRacasViewCell.swift; sourceTree = "<group>"; };
+		3E8C5CED2919D244006DD4B1 /* RacasSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RacasSectionHeaderView.swift; sourceTree = "<group>"; };
 		5813794F282EC2A20079F650 /* LearningTask-7.2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LearningTask-7.2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		58137952282EC2A20079F650 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58137954282EC2A20079F650 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		58137956282EC2A20079F650 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		58137956282EC2A20079F650 /* ListaDeRacasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaDeRacasViewController.swift; sourceTree = "<group>"; };
 		58137959282EC2A20079F650 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5813795B282EC2A40079F650 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5813795E282EC2A40079F650 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -41,6 +47,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E8C5CE72919CA8E006DD4B1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3E8C5CE92919CB5D006DD4B1 /* Raca.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3E8C5CE82919CAA1006DD4B1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3E8C5CEB2919CC75006DD4B1 /* ListaDeRacasViewCell.swift */,
+				3E8C5CED2919D244006DD4B1 /* RacasSectionHeaderView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		58137946282EC2A20079F650 = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +86,7 @@
 				58137967282ED91A0079F650 /* Supportive Files */,
 				5813795B282EC2A40079F650 /* Assets.xcassets */,
 				58137974282EF14F0079F650 /* API */,
+				3E8C5CE72919CA8E006DD4B1 /* Models */,
 				58137966282ED9150079F650 /* View */,
 				58137968282ED9320079F650 /* Scenes */,
 			);
@@ -100,7 +124,8 @@
 		5813796B282EEE1A0079F650 /* Raças */ = {
 			isa = PBXGroup;
 			children = (
-				58137956282EC2A20079F650 /* ViewController.swift */,
+				58137956282EC2A20079F650 /* ListaDeRacasViewController.swift */,
+				3E8C5CE82919CAA1006DD4B1 /* Views */,
 			);
 			name = "Raças";
 			path = "Raças";
@@ -185,11 +210,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				58137957282EC2A20079F650 /* ViewController.swift in Sources */,
+				58137957282EC2A20079F650 /* ListaDeRacasViewController.swift in Sources */,
 				58137976282EF1620079F650 /* DogsAPI.swift in Sources */,
+				3E8C5CEE2919D244006DD4B1 /* RacasSectionHeaderView.swift in Sources */,
 				5813796A282EDBE00079F650 /* Theme.swift in Sources */,
 				58137953282EC2A20079F650 /* AppDelegate.swift in Sources */,
+				3E8C5CEA2919CB5D006DD4B1 /* Raca.swift in Sources */,
 				58137955282EC2A20079F650 /* SceneDelegate.swift in Sources */,
+				3E8C5CEC2919CC75006DD4B1 /* ListaDeRacasViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

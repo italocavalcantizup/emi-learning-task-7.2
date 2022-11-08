@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Avc-dq-wk0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Avc-dq-wk0">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,36 +14,131 @@
             <objects>
                 <navigationController id="Avc-dq-wk0" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Kln-Ni-AsW">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <navigationBarAppearance key="scrollEdgeAppearance"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="ZJV-dz-TeW" kind="relationship" relationship="rootViewController" id="miy-0P-bNg"/>
+                        <segue destination="BTn-cN-Ebj" kind="relationship" relationship="rootViewController" id="uWl-hS-0V2"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F07-dw-dpA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-341" y="189"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="PLq-Z9-oOQ">
+        <!--Lista De Racas View Controller-->
+        <scene sceneID="2is-ni-32A">
             <objects>
-                <viewController id="ZJV-dz-TeW" customClass="ViewController" customModule="LearningTask_7_2" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="4UV-eh-pJc">
+                <collectionViewController id="BTn-cN-Ebj" customClass="ListaDeRacasViewController" customModule="LearningTask_7_2" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="idv-4Y-aNf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="Qif-cU-0CX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="1Qf-ir-yKJ"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="l7Y-J1-YCz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="24" minimumInteritemSpacing="24" id="RHL-Al-VF0">
+                            <size key="itemSize" width="180" height="228"/>
+                            <size key="headerReferenceSize" width="0.0" height="54"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="24" minY="12" maxX="24" maxY="20"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ListaDeRacasViewCell" id="28Q-Ey-LUE" customClass="ListaDeRacasViewCell" customModule="LearningTask_7_2" customModuleProvider="target">
+                                <rect key="frame" x="117" y="66" width="180" height="209.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="LJM-1C-ryj">
+                                    <rect key="frame" x="0.0" y="0.0" width="180" height="209.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="4To-zf-4SE" userLabel="Item Stack View">
+                                            <rect key="frame" x="0.0" y="0.0" width="180" height="209.5"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Akita Inu" translatesAutoresizingMaskIntoConstraints="NO" id="FFF-nQ-FcL" userLabel="Dog Image View">
+                                                    <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="FFF-nQ-FcL" secondAttribute="height" multiplier="1:1" id="1Iv-X8-XjB"/>
+                                                        <constraint firstAttribute="width" constant="180" id="cHT-fA-kBO"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Akita Inu" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6gA-iu-Wac" userLabel="Dog Raca Label">
+                                                    <rect key="frame" x="0.0" y="188" width="180" height="21.5"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                                    <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="4To-zf-4SE" secondAttribute="trailing" id="8nO-Cj-bLV"/>
+                                        <constraint firstAttribute="bottom" secondItem="4To-zf-4SE" secondAttribute="bottom" id="UGx-C4-3Is"/>
+                                        <constraint firstItem="4To-zf-4SE" firstAttribute="top" secondItem="LJM-1C-ryj" secondAttribute="top" id="X6e-2Z-h5S"/>
+                                        <constraint firstItem="4To-zf-4SE" firstAttribute="leading" secondItem="LJM-1C-ryj" secondAttribute="leading" id="pOP-K8-ww8"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <connections>
+                                    <outlet property="racaImageView" destination="FFF-nQ-FcL" id="tA1-15-Mdk"/>
+                                    <outlet property="racaLabel" destination="6gA-iu-Wac" id="Lfr-fe-PMB"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="RacasSectionHeaderView" id="1CK-Uy-Lqj" customClass="RacasSectionHeaderView" customModule="LearningTask_7_2" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="54"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="cro-Us-GC3" userLabel="Container Title Stack View">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="54"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="L53-KW-dS3" userLabel="Wrapping Stack View">
+                                            <rect key="frame" x="24" y="8" width="366" height="33"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Raças" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nUL-rk-ca2" userLabel="Title Label">
+                                                    <rect key="frame" x="0.0" y="11.5" width="366" height="21.5"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                                                    <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F0L-jv-AN9" userLabel="Border View">
+                                            <rect key="frame" x="24" y="45" width="366" height="1"/>
+                                            <color key="backgroundColor" systemColor="quaternaryLabelColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="1" id="q13-lw-sD6"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="24" bottom="8" trailing="24"/>
+                                </stackView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="cro-Us-GC3" firstAttribute="top" secondItem="1CK-Uy-Lqj" secondAttribute="top" id="NyW-g4-kgh"/>
+                                <constraint firstAttribute="bottom" secondItem="cro-Us-GC3" secondAttribute="bottom" id="Oyh-Au-qK4"/>
+                                <constraint firstAttribute="trailing" secondItem="cro-Us-GC3" secondAttribute="trailing" id="ke6-Wj-ElP"/>
+                                <constraint firstItem="cro-Us-GC3" firstAttribute="leading" secondItem="1CK-Uy-Lqj" secondAttribute="leading" id="zMK-rF-Eyp"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="titleLabel" destination="nUL-rk-ca2" id="mQE-RN-Rvl"/>
+                            </connections>
+                        </collectionReusableView>
+                        <connections>
+                            <outlet property="dataSource" destination="BTn-cN-Ebj" id="yqI-k4-G9s"/>
+                            <outlet property="delegate" destination="BTn-cN-Ebj" id="nYq-FL-4rH"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="RdH-JF-MtC"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dcC-w6-bBd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="512" y="383"/>
+            <point key="canvasLocation" x="469.56521739130437" y="188.83928571428569"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Akita Inu" width="500" height="500"/>
+        <systemColor name="quaternaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.17647058823529413" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
